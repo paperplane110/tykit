@@ -1,3 +1,11 @@
+'''
+Description: 
+version: 
+Author: TianyuYuan
+Date: 2021-04-02 15:41:57
+LastEditors: TianyuYuan
+LastEditTime: 2021-04-02 16:29:39
+'''
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -13,6 +21,7 @@ setuptools.setup(
   long_description_content_type="text/markdown",
   url="https://github.com/paperplane110/tykit.git",
   packages=setuptools.find_packages(),
+  install_requires=['rich>=9'],
   classifiers=[
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
