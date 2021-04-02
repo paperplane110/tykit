@@ -4,11 +4,11 @@
  * @Author: TianyuYuan
  * @Date: 2021-04-02 15:42:10
  * @LastEditors: TianyuYuan
- * @LastEditTime: 2021-04-02 18:39:06
+ * @LastEditTime: 2021-04-02 19:20:46
 -->
 # tykit (Tell You kit)👀
 
-![Alt Text](https://github.com/paperplane110/tykit/blob/master/image/Kapture%202021-04-02%20at%2017.18.06.gif)
+![Alt Text](./image/Kapture%202021-04-02%20at%2017.18.06.gif)
 
 ## 📜 Description
 'Tell You kit' is a toolkit to monitor your scripts' status easily, which haves rich and pretty output for progress bar and console logs.
@@ -27,4 +27,8 @@ for ***loop,range,multi-threading and multi-threading with multi-params***
 > for i in pb_range(50):
 >    sleep(0.001)
 > ```
+> ![pbrange](./image/pbrange.gif)
 
+
+
+> ___pb_iter(iter_file)___
