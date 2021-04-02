@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-03-26 13:44:18
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-02 17:01:17
+LastEditTime: 2021-04-02 17:46:58
 '''
 from rich import print as rprint
 from rich.console import Console
@@ -214,18 +214,18 @@ def pb_multi_thread_partial_testcase(x,a,b,c):
 
 if __name__ == "__main__":
     # ! Progress Bar Test case
-    rlog = RLog()
-    rlog.start('Use tykit.progress bar in for-loop just like range()')
-    pb_range_testcase(3)
-    pb_range_testcase(50)
-    rlog.stage()
-    rlog.start("Use tykit.progress bar with multi-threading and boost your speed! ")
-    pb_multi_thread_testcase(50)
-    pb_multi_thread_testcase(1000)
-    rlog.console.log("pb_multi_thread_partial_testcase(15,1,1,1)")
-    rlog.say("tykit also supports multi-threading task with multi-thread inputs!")
-    pb_multi_thread_partial_testcase(1000,1,1,1)
-    rlog.done("The show is done! Hope it's helpful!:smile:")
+    # rlog = RLog()
+    # rlog.start('Use tykit.progress bar in for-loop just like range()')
+    # pb_range_testcase(3)
+    # pb_range_testcase(50)
+    # rlog.stage()
+    # rlog.start("Use tykit.progress bar with multi-threading and boost your speed! ")
+    # pb_multi_thread_testcase(50)
+    # pb_multi_thread_testcase(1000)
+    # rlog.console.log("pb_multi_thread_partial_testcase(15,1,1,1)")
+    # rlog.say("tykit also supports multi-threading task with multi-thread inputs!")
+    # pb_multi_thread_partial_testcase(1000,1,1,1)
+    # rlog.done("The show is done! Hope it's helpful!:smile:")
     # ! RLog Test case
     # rlog = RLog()
     # a = 9
@@ -237,4 +237,4 @@ if __name__ == "__main__":
     # rlog.caution('Model test isnt done yet!')
     # rlog.done('Pipeline Completed!\nThe dataset has been build successfully!',align='center',padding=1)
     # rlog.caution("Note: Model Test Not Done, Please download and test model manually......")
-    # rlog.stage('chapter one')
+    # rlog.stage('chapter one') 
