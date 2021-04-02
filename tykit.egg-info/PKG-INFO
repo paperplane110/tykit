@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tykit
-Version: 0.0.2
+Version: 0.0.3
 Summary: A tool kit of progress bars and console logs with rich output
 Home-page: https://github.com/paperplane110/tykit.git
 Author: tyyuan
@@ -12,16 +12,31 @@ Description: <!--
          * @Author: TianyuYuan
          * @Date: 2021-04-02 15:42:10
          * @LastEditors: TianyuYuan
-         * @LastEditTime: 2021-04-02 16:02:59
+         * @LastEditTime: 2021-04-02 16:46:23
         -->
-        # tykit (Tell You kit)
+        # tykit (Tell You kit)👀
         
-        ## Description
+        ![Alt Text](./image/Kapture%202021-04-02%20at%2017.18.06.gif)
+        
+        ## 📜 Description
         'Tell You kit' is a toolkit to monitor your scripts' status easily, which haves rich and pretty output for progress bar and console logs.
         The tykit may support more decent output in the future
         
-        ## Features
-        ...
+        ## 🌟 Features
+        ### 🚀 ProgressBar 
+        for ***loop,range,multi-threading and multi-threading with multi-params***
+        
+        > ___pb_range(*args)___
+        > ```python3
+        > from tykit import pb_range
+        > from time import sleep
+        > 
+        > # use pb_range just like range()
+        > for i in pb_range(50):
+        >    sleep(0.001)
+        > ```
+        
+        
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
