@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-02 15:41:57
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-02 19:00:47
+LastEditTime: 2021-04-06 00:26:45
 '''
 import setuptools
 
@@ -13,7 +13,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="tykit",
-  version="0.0.6",
+  version="0.0.7",
   author="tyyuan",
   author_email="1374736649@qq.com",
   description="A tool kit of progress bars and console logs with rich output",

@@ -1,3 +1,4 @@
-.eggs/
-build/
-dist/
+.eggs/*
+build/*
+dist/*
+tykit/__pycache__/
