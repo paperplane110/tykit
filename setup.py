@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-02 15:41:57
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-06 00:26:45
+LastEditTime: 2021-04-06 22:46:59
 '''
 import setuptools
 
@@ -13,13 +13,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="tykit",
-  version="0.0.7",
+  version="0.0.8",
   author="tyyuan",
   author_email="1374736649@qq.com",
   description="A tool kit of progress bars and console logs with rich output",
   long_description=long_description,
   long_description_content_type="text/markdown",
-  url="https://github.com/paperplane110/tykit.git",
+  url="https://github.com/paperplane110/tykit",
   packages=setuptools.find_packages(),
   install_requires=['rich>=9'],
   classifiers=[
