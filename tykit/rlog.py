@@ -1,10 +1,10 @@
 '''
-Description: 
+Description: rlog: Rich log. 丰富的日志打印
 version: 
 Author: TianyuYuan
 Date: 2021-04-03 00:02:11
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-06 00:06:54
+LastEditTime: 2021-04-06 21:57:32
 '''
 from rich.console import Console
 from rich.panel import Panel
@@ -12,9 +12,10 @@ from rich.panel import Panel
 _console = Console()
 
 class RLog():
-    """打印log的模版 with rich
+    """
+    ## Rich Log. 丰富的日志打印
     ### method：
-    say(line), saynum(line,num), start, done, error, caution
+    say(line), saynum(line,num), start, done, error, caution, stage
     """
 
     @staticmethod
