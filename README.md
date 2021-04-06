@@ -4,7 +4,7 @@
  * @Author: TianyuYuan
  * @Date: 2021-04-02 15:42:10
  * @LastEditors: TianyuYuan
- * @LastEditTime: 2021-04-06 00:21:31
+ * @LastEditTime: 2021-04-06 20:31:42
 -->
 # tykit (Tell You kit)👀
 
@@ -89,7 +89,7 @@ print(result[:10])
 ```
 
 ## 🛎️ rlog (Rich-log)
-rlog is a module for log printing with ***rich***. It has some functions to print pretty logs and hints. The usage is simple and neat. The samples are shown below👇(for more details, you can find in [usage_of_rlog.py](../../examples/usage_of_rlog.py) in examples)
+rlog is a module for log printing with ***rich***. It has some functions to print pretty logs and hints. The usage is simple and neat. The samples are shown below👇(for more details, you can find in [usage_of_rlog.py](https://github.com/paperplane110/tykit/blob/master/examples/usage_of_rlog.py) in examples)
 ![rlog_show](./image/rlog.gif)
 
 ## 💻 ~~FaceXClient~~ (used in work)
