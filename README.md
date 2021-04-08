@@ -4,14 +4,14 @@
  * @Author: TianyuYuan
  * @Date: 2021-04-02 15:42:10
  * @LastEditors: TianyuYuan
- * @LastEditTime: 2021-04-07 00:16:11
+ * @LastEditTime: 2021-04-08 15:38:43
 -->
 # tykit (Tell You kit) ![version](https://img.shields.io/badge/tykit-v0.0.8-blue.svg) ![rich](https://img.shields.io/badge/Powered-Rich-brightgreen.svg)
 
 ![Alt Text](./image/Kapture%202021-04-02%20at%2017.18.06.gif)
 
 ## 📜 Description
-'tykit--Tell You kit', pronounced like 'ticket', is a toolkit to monitor your scripts' status easily, which haves rich and pretty output for progress bar and console logs.
+'tykit--Tell You kit', pronounced like 'ticket', is a toolkit to monitor your scripts' status easily, which has rich and pretty output for progress bar and console logs.
 The tykit may support more decent output in the future
 
 ## ⚙️ Install
@@ -93,3 +93,4 @@ rlog is a module for log printing with ***rich***. It has some functions to prin
 ![rlog_show](./image/rlog.gif)
 
 ## 💻 ~~FaceXClient~~ (used in work)
+## 🔍 ~~ParseNP~~ (used in work)
