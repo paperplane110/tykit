@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-06 21:22:57
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-14 23:02:56
+LastEditTime: 2021-04-15 00:56:14
 '''
 import json
 import os.path as osp
@@ -158,3 +158,6 @@ class ParseNP:
         print("sample总数为：", total_samples)
         print("register总数为：", total_registers)
         print("request总数为：", total_requests)
+
+if __name__ == "__main__":
+    print(help(ParseNP))

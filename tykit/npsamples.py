@@ -4,9 +4,9 @@ version:
 Author: TianyuYuan
 Date: 2021-04-14 23:00:45
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-15 00:35:56
+LastEditTime: 2021-04-15 00:38:03
 '''
-from .parse_np import ParseNP
+from parse_np import ParseNP
 import json
 import os.path as osp
 
@@ -176,3 +176,6 @@ class NPsamples():
         self.data["images"].remove(sample1)
         self.data["images"].remove(sample2)
         self.data["images"].append(new_sample)
+
+if __name__ == "__main__":
+    print(help(NPsamples))

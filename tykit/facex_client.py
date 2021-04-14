@@ -251,3 +251,6 @@ class FacexClient():
                 continue
             ans[txt_name][rgb_path] = box
         return ans
+
+if __name__ == "__main__":
+    print(help(FacexClient))
