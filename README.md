@@ -4,7 +4,7 @@
  * @Author: TianyuYuan
  * @Date: 2021-04-02 15:42:10
  * @LastEditors: TianyuYuan
- * @LastEditTime: 2021-04-08 15:38:43
+ * @LastEditTime: 2021-04-15 00:13:56
 -->
 # tykit (Tell You kit) ![version](https://img.shields.io/badge/tykit-v0.0.8-blue.svg) ![rich](https://img.shields.io/badge/Powered-Rich-brightgreen.svg)
 
@@ -92,5 +92,8 @@ print(result[:10])
 rlog is a module for log printing with ***rich***. It has some functions to print pretty logs and hints. The usage is simple and neat. The samples are shown below👇(for more details, you can find in [usage_of_rlog.py](https://github.com/paperplane110/tykit/blob/master/examples/usage_of_rlog.py) in examples)
 ![rlog_show](./image/rlog.gif)
 
-## 💻 ~~FaceXClient~~ (used in work)
-## 🔍 ~~ParseNP~~ (used in work)
+---
+# 🐝 [Exclusive for AIBEE](aibee_tools.md)
+## 💻 ![facex](https://img.shields.io/badge/Class-FaceXClient-brightgreen.svg)
+## 🔍 ![parsenp](https://img.shields.io/badge/Static-ParseNP-blue.svg) 
+## 🥑 ![npsamples](https://img.shields.io/badge/Class-NPsamples-orange.svg)
