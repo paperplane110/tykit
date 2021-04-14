@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-14 23:00:45
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-14 23:47:25
+LastEditTime: 2021-04-15 00:35:56
 '''
 from .parse_np import ParseNP
 import json
@@ -29,6 +29,7 @@ class NPsamples():
         else:
             print("Unsupported sample file type: ",jsonfile)
         self.np = np
+        self.group_id = self.data["images"][0]["group_id"]
         self.total_samples = ParseNP.total_samples(self.data)
         self.total_requests = ParseNP.total_requests(self.data)
         self.total_registers = ParseNP.total_registers(self.data)
@@ -146,6 +147,15 @@ class NPsamples():
         self.total_samples = ParseNP.total_samples(self.data)
         print(f"After deleting, {self.np}_data has samples: {self.total_samples}")
 
+    def __new_sample(self,ids:list,requests:list,registers:list) -> dict:
+        sample = {
+            "ids":ids,
+            "group_id":self.group_id,
+            "request_images":requests,
+            "register_images":registers
+        }
+        return sample
+
     def merge_samples(self,sample1,sample2):
         """
         融合两个sample
@@ -153,5 +163,16 @@ class NPsamples():
         @params sample2
         @return: void
         """
-        
-        return 0
+        ids_list1 = sample1["ids"]
+        requests1 = sample1["request_images"]
+        registers1 = sample1["register_images"]
+        ids_list2 = sample2["ids"]
+        requests2 = sample2["request_images"]
+        registers2 = sample2["register_images"]
+        new_ids = ids_list1 + ids_list2
+        new_requests = requests1 + requests2
+        new_registers = registers1 + registers2
+        new_sample = self.__new_sample(new_ids, new_requests, new_registers)
+        self.data["images"].remove(sample1)
+        self.data["images"].remove(sample2)
+        self.data["images"].append(new_sample)
