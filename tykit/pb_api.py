@@ -1,11 +1,11 @@
-'''
+"""
 Description: higher api for pb (progress bar).py
 version:
 Author: TianyuYuan
 Date: 2021-03-26 13:44:18
 LastEditors: TianyuYuan
 LastEditTime: 2021-04-06 21:20:09
-'''
+"""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from functools import partial
 

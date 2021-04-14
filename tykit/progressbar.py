@@ -1,11 +1,11 @@
-'''
+"""
 Description: 进度条的实现
 version:
 Author: TianyuYuan
 Date: 2021-04-02 23:56:05
 LastEditors: TianyuYuan
 LastEditTime: 2021-04-06 21:25:10
-'''
+"""
 from datetime import datetime
 
 from rich import print as rprint
