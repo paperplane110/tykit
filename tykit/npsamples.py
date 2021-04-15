@@ -4,9 +4,9 @@ version:
 Author: TianyuYuan
 Date: 2021-04-14 23:00:45
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-15 00:38:03
+LastEditTime: 2021-04-15 14:36:31
 '''
-from parse_np import ParseNP
+from .parse_np import ParseNP
 import json
 import os.path as osp
 
@@ -176,6 +176,16 @@ class NPsamples():
         self.data["images"].remove(sample1)
         self.data["images"].remove(sample2)
         self.data["images"].append(new_sample)
+        
+    def add_request_to_sample(self, request_path:str, index:int):
+        """
+        将request_path添加到index位的sample里
+        @params: request_path 要添加的request的绝对地址
+        @params: index 目的地sample的index
+        @return: void
+        """
+        self.data["images"][index].append(request_path)
+
 
 if __name__ == "__main__":
     print(help(NPsamples))
