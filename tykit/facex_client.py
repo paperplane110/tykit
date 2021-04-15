@@ -228,7 +228,7 @@ class FacexClient():
         if check:
             r = self.compare_1vn(img_address, check=True, op=10)
         else:
-            r = self.img_process(img_address, op=10)
+            r = self.compare_1vn(img_address, check=False, op=10)
         if not r:
             return None
         box = r['data']['face_info']['box']
