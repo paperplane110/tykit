@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-06 21:22:57
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-15 00:56:14
+LastEditTime: 2021-04-15 15:08:46
 '''
 import json
 import os.path as osp
@@ -106,15 +106,15 @@ class ParseNP:
         return ids_index
     
     @staticmethod
-    def total_samples(self, data) -> int:
+    def total_samples(data) -> int:
         """统计data中有多少个sample"""
         if not isinstance(data, dict):
             # not dict, is data's path?
-            data = self.read_json(data)
+            data = ParseNP.read_json(data)
         return len(data['images'])
 
     @staticmethod
-    def total_requests(self, data) -> int:
+    def total_requests(data) -> int:
         """
         描述：统计data中有多少的request_images
         - data: 由json导入后的np_samples.json
@@ -122,14 +122,14 @@ class ParseNP:
         """
         if not isinstance(data, dict):
             # not dict, is data's path?
-            data = self.read_json(data)
+            data = ParseNP.read_json(data)
         total = 0
         for sample in data['images']:
             total += len(sample['request_images'])
         return total
 
     @staticmethod
-    def total_registers(self, data) -> int:
+    def total_registers(data) -> int:
         """
         描述：统计data中有多少的register_images
         - data: 由json导入后的np_samples.json
@@ -137,20 +137,20 @@ class ParseNP:
         """
         if not isinstance(data, dict):
             # not dict, is data's path?
-            data = self.read_json(data)
+            data = ParseNP.read_json(data)
         total = 0
         for sample in data['images']:
             total += len(sample['register_images'])
         return total
 
     @staticmethod
-    def show_info(self, data, np=""):
+    def show_info(data, np=""):
         """展示np_samples的主要信息"""
         if not isinstance(data, dict):
-            data = self.read_json(data)
-        total_samples = self.total_samples(data)
-        total_registers = self.total_registers(data)
-        total_requests = self.total_requests(data)
+            data = ParseNP.read_json(data)
+        total_samples = ParseNP.total_samples(data)
+        total_registers = ParseNP.total_registers(data)
+        total_requests = ParseNP.total_requests(data)
         if np == "p":
             print("p_samples的信息：")
         if np == "n":

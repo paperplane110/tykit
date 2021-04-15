@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-14 23:00:45
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-15 14:36:31
+LastEditTime: 2021-04-15 19:36:32
 '''
 from .parse_np import ParseNP
 import json
@@ -47,7 +47,7 @@ class NPsamples():
         return ParseNP.get_register2index(self.data)
     
     def ids2sample(self) -> dict:
-        return ParseNP.ids2sample(self.data)
+        return ParseNP.get_ids2sample(self.data)
 
     def ids2index(self) -> dict:
         return ParseNP.get_ids2index(self.data)
@@ -60,22 +60,23 @@ class NPsamples():
         empty_sample = []
         for sample in self.data['images']:
             register_list = sample['register_images']
-            # request_list = sample['request_images']
-            # ids = sample['ids'][0]
-            # if not request_list:
-            #     print(f"{ids} don't have any requests")
-            if not register_list:
+            request_list = sample['request_images']
+            if (not request_list) and (self.np == "n"):
                 empty_sample.append(sample)
-        print("Find empty 'register' samples: ", len(empty_sample))
+            if (not register_list) and (self.np == "p"):
+                empty_sample.append(sample)
+        if self.np == "n":
+            print("Find empty 'request' samples: ", len(empty_sample))
+        if self.np == "p":
+            print("Find empty 'register' samples: ", len(empty_sample))
         return empty_sample
 
     def save_json(self,name="new_p_samples.json"):
         """以name为名保持json，name需要json后缀"""
         # p_samples.json 应该在保持之前检查是否有空注册照的情况
-        if self.np == "p":
-            empty_sample = self.check_empty_sample()
-            if empty_sample:
-                self.delete_samples(empty_sample)
+        empty_sample = self.check_empty_sample()
+        if empty_sample:
+            self.delete_samples(empty_sample)
         with open(name,"w") as fp:
             json.dump(self.data, fp, indent=4)
         print(f"The {name} has been saved!")
