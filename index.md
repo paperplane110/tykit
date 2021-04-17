@@ -93,7 +93,7 @@ rlog is a module for log printing with ***rich***. It has some functions to prin
 ![rlog_show](./image/rlog.gif)
 
 ---
-# 🐝 [Exclusive for AIBEE](aibee_tools.md)
+# 🐝 [Exclusive for AIBEE](https://github.com/paperplane110/tykit/blob/master/aibee_tools.md)
 ## 💻 ![facex](https://img.shields.io/badge/Class-FaceXClient-brightgreen.svg)
 ## 🔍 ![parsenp](https://img.shields.io/badge/Static-ParseNP-blue.svg) 
 ## 🥑 ![npsamples](https://img.shields.io/badge/Class-NPsamples-orange.svg)
