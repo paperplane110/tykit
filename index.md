@@ -4,11 +4,11 @@
  * @Author: TianyuYuan
  * @Date: 2021-04-02 15:42:10
  * @LastEditors: TianyuYuan
- * @LastEditTime: 2021-04-08 15:38:43
+ * @LastEditTime: 2021-04-15 00:13:56
 -->
-# tykit (Tell You kit) ![version](https://img.shields.io/badge/tykit-v0.0.8-blue.svg) [![rich](https://img.shields.io/badge/Powered-Rich-brightgreen.svg)](https://github.com/willmcgugan/rich)
+# tykit (Tell You kit) ![version](https://img.shields.io/badge/tykit-v0.0.8-blue.svg) ![rich](https://img.shields.io/badge/Powered-Rich-brightgreen.svg)
 
-![showcase](https://github.com/paperplane110/tykit/blob/master/image/Kapture%202021-04-02%20at%2017.18.06.gif?raw=true)
+![Alt Text](./image/Kapture%202021-04-02%20at%2017.18.06.gif)
 
 ## 📜 Description
 'tykit--Tell You kit', pronounced like 'ticket', is a toolkit to monitor your scripts' status easily, which has rich and pretty output for progress bar and console logs.
@@ -47,7 +47,7 @@ iterable_file = [x for x in range(100)]
 for i in pb_iter(iterable_file):
     some_task(i)
 ```
-![pbrange](https://github.com/paperplane110/tykit/blob/master/image/pbrange.gif?raw=true)
+![pbrange](./image/pbrange.gif)
 
 
 
@@ -90,7 +90,10 @@ print(result[:10])
 
 ## 🛎️ rlog (Rich-log)
 rlog is a module for log printing with ***rich***. It has some functions to print pretty logs and hints. The usage is simple and neat. The samples are shown below👇(for more details, you can find in [usage_of_rlog.py](https://github.com/paperplane110/tykit/blob/master/examples/usage_of_rlog.py) in examples)
-![rlog_show](https://github.com/paperplane110/tykit/blob/master/image/rlog.gif?raw=true)
+![rlog_show](./image/rlog.gif)
 
-## 💻 ~~FaceXClient~~ (used in work)
-## 🔍 ~~ParseNP~~ (used in work)
+---
+# 🐝 [Exclusive for AIBEE](aibee_tools.md)
+## 💻 ![facex](https://img.shields.io/badge/Class-FaceXClient-brightgreen.svg)
+## 🔍 ![parsenp](https://img.shields.io/badge/Static-ParseNP-blue.svg) 
+## 🥑 ![npsamples](https://img.shields.io/badge/Class-NPsamples-orange.svg)
