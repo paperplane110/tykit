@@ -14,16 +14,15 @@ import os.path as osp
 import numpy as np
 import requests
 
-__DNS_AIBEE = {
-    'gpu204': "172.16.10.4",
-    'gpu205': "172.16.10.5",
-    'gpu206': "172.16.10.6",
-}
-
 class FacexClient():
     """
     针对facex的客户端，可以发送请求返回应答，不用考虑请求格式
     """
+    __DNS_AIBEE = {
+    'gpu204': "172.16.10.4",
+    'gpu205': "172.16.10.5",
+    'gpu206': "172.16.10.6",
+    }
 
     def __init__(self, ip, port, group_id='FacexClient-tyyuan'):
         """
@@ -32,8 +31,8 @@ class FacexClient():
         - port: facex的服务端口
         - group_id: 注册照片的组名
         """
-        if ip in __DNS_AIBEE:
-            ip = __DNS_AIBEE[ip]
+        if ip in self.__DNS_AIBEE:
+            ip = self.__DNS_AIBEE[ip]
         self.url = "http://{}:{}".format(ip, port)
         self.api_add = "/users/v1/add"
         self.api_compare_1v1 = "/face/v1/compare-two-image"
