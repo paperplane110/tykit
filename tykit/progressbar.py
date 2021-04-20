@@ -38,7 +38,7 @@ class ProgressBar():
         layout = ""
         return layout
 
-    def time_countdown(self, progress):
+    def time_countdown(self, progress:int):
         if progress == 0:
             return "--:--"
         now_time = datetime.now()

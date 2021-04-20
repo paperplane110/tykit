@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-14 23:00:45
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-15 19:36:32
+LastEditTime: 2021-04-20 17:06:16
 '''
 from .parse_np import ParseNP
 import json
@@ -51,6 +51,12 @@ class NPsamples():
 
     def ids2index(self) -> dict:
         return ParseNP.get_ids2index(self.data)
+
+    def request_name2path(self) -> dict:
+        return ParseNP.get_name2path(self.data, "request")
+
+    def register_name2path(self) -> dict:
+        return ParseNP.get_name2path(self.data, "register")
 
     def show_info(self) -> dict:
         ParseNP.show_info(self.data,np=self.np)
@@ -106,7 +112,7 @@ class NPsamples():
         """
         print(f"Before deleting, {self.np}_data has registers: {self.total_registers}")
         print("There are {} registers should be deleted.".format(len(registers)))
-        register2index = self.request2index()
+        register2index = self.register2index()
         for register_path in registers:
             register_name = osp.basename(register_path)
             index = register2index[register_name]

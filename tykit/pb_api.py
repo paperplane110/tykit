@@ -19,9 +19,7 @@ from .progressbar import ProgressBar
 def pb_iter(iter_files):
     """生成器，将可迭代对象填入，在生成element的同时显示迭代的进度"""
     pb = ProgressBar("iter", len(iter_files))
-    i = 0
-    for element in iter_files:
-        i += 1
+    for i,element in enumerate(iter_files):
         pb.print_progressbar(i)
         yield element
 
@@ -107,3 +105,8 @@ def pb_multi_thread_partial_testcase(x, a, b, c):
     iter_files = range(x)
     result = pb_multi_thread_partial(10, multi_param_task, iter_files, a=a, b=b, c=c)
     # print(result)
+
+if __name__ == "__main__":
+    from time import sleep
+    for i in pb_range(1000):
+        sleep(0.1)

@@ -4,18 +4,22 @@
  * @Author: TianyuYuan
  * @Date: 2021-04-02 15:42:10
  * @LastEditors: TianyuYuan
- * @LastEditTime: 2021-04-15 00:13:56
+ * @LastEditTime: 2021-04-20 17:07:10
 -->
+
 # tykit (Tell You kit) ![version](https://img.shields.io/badge/tykit-v0.0.8-blue.svg) ![rich](https://img.shields.io/badge/Powered-Rich-brightgreen.svg)
 
 ![Alt Text](./image/Kapture%202021-04-02%20at%2017.18.06.gif)
 
 ## 📜 Description
+
 'tykit--Tell You kit', pronounced like 'ticket', is a toolkit to monitor your scripts' status easily, which has rich and pretty output for progress bar and console logs.
 The tykit may support more decent output in the future
 
 ## ⚙️ Install
+
 tykit can be easily installed with `pip` as below
+
 ```bash
 # for python2
 pip install tykit
@@ -24,13 +28,17 @@ pip3 install tykit
 ```
 
 ## 🌟 Features
+
 ---
+
 ## 🚀 ProgressBar 进度条
+
 for ***loop,range,multi-threading and multi-threading with multi-params***
 
 > ___pb_range(*args)___
 
 This function is just like the python builtin function `range()`
+
 ```python
 from tykit import pb_range
 from time import sleep
@@ -47,9 +55,8 @@ iterable_file = [x for x in range(100)]
 for i in pb_iter(iterable_file):
     some_task(i)
 ```
+
 ![pbrange](./image/pbrange.gif)
-
-
 
 > ___pb_multi_thread(workers:int,task,iter_files)___
 
@@ -89,11 +96,6 @@ print(result[:10])
 ```
 
 ## 🛎️ rlog (Rich-log)
+
 rlog is a module for log printing with ***rich***. It has some functions to print pretty logs and hints. The usage is simple and neat. The samples are shown below👇(for more details, you can find in [usage_of_rlog.py](https://github.com/paperplane110/tykit/blob/master/examples/usage_of_rlog.py) in examples)
 ![rlog_show](./image/rlog.gif)
-
----
-# 🐝 [Exclusive for AIBEE](aibee_tools.md)
-## 💻 ![facex](https://img.shields.io/badge/Class-FaceXClient-brightgreen.svg)
-## 🔍 ![parsenp](https://img.shields.io/badge/Static-ParseNP-blue.svg) 
-## 🥑 ![npsamples](https://img.shields.io/badge/Class-NPsamples-orange.svg)

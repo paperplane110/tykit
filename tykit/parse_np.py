@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-06 21:22:57
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-15 15:08:46
+LastEditTime: 2021-04-20 16:41:03
 '''
 import json
 import os.path as osp
@@ -105,6 +105,26 @@ class ParseNP:
             index += 1
         return ids_index
     
+    @staticmethod
+    def get_name2path(data:dict, kind:str) -> dict:
+        """
+        从data中获得img_name和img_path的关系
+        @param: kind 填写request 或 register
+        """
+        if kind == "request":
+            imgkind = "request_images"
+        elif kind == "register":
+            imgkind = "register_images"
+        else:
+            print("Invalid args: 'kind' should be 'register' or 'request'")
+            return -1
+        name_path = {}
+        for sample in data["images"]:
+            for path in sample[imgkind]:
+                name = osp.basename(path)
+                name_path[name] = path
+        return name_path
+
     @staticmethod
     def total_samples(data) -> int:
         """统计data中有多少个sample"""
