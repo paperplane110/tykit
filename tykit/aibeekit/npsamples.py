@@ -4,9 +4,9 @@ version:
 Author: TianyuYuan
 Date: 2021-04-14 23:00:45
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-20 17:06:16
+LastEditTime: 2021-04-21 16:15:23
 '''
-from .parse_np import ParseNP
+from tykit.parse_np import ParseNP
 import json
 import os.path as osp
 
@@ -127,13 +127,15 @@ class NPsamples():
         @return: void 副作用，改变了self.data
         """
         print(f"Before deleting, {self.np}_data has samples: {self.total_samples}")
-        register2sample = self.request2sample()
+        register2sample = self.register2sample()
         dele_sample_list = []
         for register_path in registers:
             register_name = osp.basename(register_path)
             sample = register2sample[register_name]
             dele_sample_list.append(sample)
-        dele_set = set(dele_sample_list)
+        # BUG Cannot use set()
+        # dele_set = set(dele_sample_list) 
+        dele_set = dele_sample_list
         print("There are {} samples should be deleted".format(len(dele_set)))
         for sample in dele_set:
             self.data["images"].remove(sample)
@@ -147,7 +149,9 @@ class NPsamples():
         @return: void Side-effect: self.data
         """
         print(f"Before deleting, {self.np}_data has samples: {self.total_samples}")
-        dele_set = set(samples)
+        # BUG Cannot use set
+        # dele_set = set(samples)
+        dele_set = samples
         print("There are {} samples should be deleted".format(len(dele_set)))
         for sample in dele_set:
             self.data["images"].remove(sample)

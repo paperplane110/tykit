@@ -8,8 +8,7 @@ LastEditTime: 2021-04-06 21:20:09
 """
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from functools import partial
-
-from .progressbar import ProgressBar
+from tykit.progressbar import ProgressBar
 
 
 # * * * * * * * * * * * * * * * * * * * * * * * #

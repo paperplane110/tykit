@@ -24,7 +24,7 @@ class FacexClient():
     'gpu206': "172.16.10.6",
     }
 
-    def __init__(self, ip, port, group_id='FacexClient-tyyuan'):
+    def __init__(self, ip:str, port:int, group_id='FacexClient-tyyuan'):
         """
         初始化一个facex的客户端
         - ip: 服务器的ip地址(ip可直接选择输入gpu204/gpu205/gpu206)
@@ -81,10 +81,7 @@ class FacexClient():
     @staticmethod
     def open_dataset(dataset) -> dict:
         """打开数据集"""
-        if os.path.exists(dataset):
-            with open(dataset, 'r') as fp:
-                data = json.load(fp)
-        elif isinstance(dataset, dict):
+        if isinstance(dataset, dict):
             data = dataset
         else:
             print("Unsupported dataset type, please make sure the input type is path or dict")
