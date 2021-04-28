@@ -108,4 +108,4 @@ def pb_multi_thread_partial_testcase(x, a, b, c):
 if __name__ == "__main__":
     from time import sleep
     for i in pb_range(1000):
-        sleep(0.1)
+        sleep(0.01)

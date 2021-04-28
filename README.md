@@ -4,10 +4,10 @@
  * @Author: TianyuYuan
  * @Date: 2021-04-02 15:42:10
  * @LastEditors: TianyuYuan
- * @LastEditTime: 2021-04-20 17:07:10
+ * @LastEditTime: 2021-04-28 15:39:42
 -->
 
-# tykit (Tell You kit) ![version](https://img.shields.io/badge/tykit-v0.0.8-blue.svg) ![rich](https://img.shields.io/badge/Powered-Rich-brightgreen.svg)
+# tykit (Tell You kit) ![version](https://img.shields.io/github/release/paperplane110/tykit.svg) ![rich](https://img.shields.io/badge/Powered-Rich-brightgreen.svg)
 
 ![Alt Text](./image/Kapture%202021-04-02%20at%2017.18.06.gif)
 

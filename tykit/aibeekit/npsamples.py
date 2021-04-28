@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-04-14 23:00:45
 LastEditors: TianyuYuan
-LastEditTime: 2021-04-21 16:15:23
+LastEditTime: 2021-04-28 15:41:33
 '''
 from tykit.parse_np import ParseNP
 import json
@@ -19,8 +19,8 @@ class NPsamples():
     def __init__(self, jsonfile, np:str):
         """
         对象化np_samples.json
-        @params: jsonfile 可以是json的地址，或解析后的dict
-        @params: np 是n_samples.json就填”n“，反之填”p“
+        @param: jsonfile 可以是json的地址，或解析后的dict
+        @param: np 是n_samples.json就填”n“，反之填”p“
         """
         if isinstance(jsonfile,str):
             self.data = ParseNP.read_json(jsonfile)
@@ -91,7 +91,7 @@ class NPsamples():
     def delete_requests(self, requests:list):
         """
         将requests列表中的request_image从data中删除
-        @params: requests 需要删除的request图片的列表，注意列表中的每一项必须是request_path（because list.remove）
+        @param: requests 需要删除的request图片的列表，注意列表中的每一项必须是request_path（because list.remove）
         @return: void 副作用，改变了self.data
         """
         print(f"Before deleting, {self.np}_data has requests: {self.total_requests}")
@@ -107,7 +107,7 @@ class NPsamples():
     def delete_registers(self, registers:list):
         """
         将register列表中的register_image从data中删除
-        @params: registers:list 需要删除的register图片的列表，注意列表中的每一项必须是register_path（because list.remove）
+        @param: registers:list 需要删除的register图片的列表，注意列表中的每一项必须是register_path（because list.remove）
         @return: void 副作用，改变了self.data
         """
         print(f"Before deleting, {self.np}_data has registers: {self.total_registers}")
@@ -123,7 +123,7 @@ class NPsamples():
     def delete_samples_by_registers(self,registers:list):
         """
         将包含registers的sample从data中删除
-        @params: registers:list 需要删除的register图片的列表，注意列表中的每一项必须是register_path（because list.remove）
+        @param: registers:list 需要删除的register图片的列表，注意列表中的每一项必须是register_path（because list.remove）
         @return: void 副作用，改变了self.data
         """
         print(f"Before deleting, {self.np}_data has samples: {self.total_samples}")
@@ -145,7 +145,7 @@ class NPsamples():
     def delete_samples(self, samples:list):
         """
         将samples列表中的sample从data中删除
-        @params: samples:list 需要删除的samples列表
+        @param: samples:list 需要删除的samples列表
         @return: void Side-effect: self.data
         """
         print(f"Before deleting, {self.np}_data has samples: {self.total_samples}")
@@ -170,8 +170,8 @@ class NPsamples():
     def merge_samples(self,sample1,sample2):
         """
         融合两个sample
-        @params sample1
-        @params sample2
+        @param sample1
+        @param sample2
         @return: void
         """
         ids_list1 = sample1["ids"]
@@ -191,12 +191,25 @@ class NPsamples():
     def add_request_to_sample(self, request_path:str, index:int):
         """
         将request_path添加到index位的sample里
-        @params: request_path 要添加的request的绝对地址
-        @params: index 目的地sample的index
+        @param: request_path 要添加的request的绝对地址
+        @param: index 目的地sample的index
         @return: void
         """
         self.data["images"][index].append(request_path)
 
+    def list_registers(self) -> list:
+        """将所有register存入list"""
+        registers = []
+        for sample in self.data["images"]:
+            registers += sample["register_images"]
+        return registers
+    
+    def list_requests(self) -> list:
+        """将所有request存入list"""
+        requests = []
+        for sample in self.data["images"]:
+            requests += sample["request_images"]
+        return requests
 
 if __name__ == "__main__":
     print(help(NPsamples))
